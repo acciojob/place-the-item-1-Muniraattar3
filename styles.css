@@ -1,2 +1,26 @@
 
 /* Your CSS Code here. */
+/* Holder class - container for the items */
+.holder {
+  display: flex;           /* Use Flexbox layout */
+  flex-wrap: wrap;         /* Allow items to wrap to the next row */
+  justify-content: space-between; /* Space between items, and align first and last at the ends */
+  margin: 0 10px;          /* Optional: Add some margin around the container */
+}
+
+/* Item class - individual item */
+.item {
+  flex: 1 1 150px;         /* Items will take at least 150px and can grow, but won't shrink below 150px */
+  margin: 10px;            /* Add some space around each item */
+  text-align: center;      /* Center text inside the item */
+  background-color: lightgray; /* Optional: For visibility */
+  padding: 20px;           /* Optional: Add padding for content */
+  box-sizing: border-box;  /* Ensures padding is included in width calculation */
+}
+
+/* Optional: Responsive design */
+@media (max-width: 768px) {
+  .item {
+    flex: 1 1 100%;         /* On smaller screens, make each item take up the full width */
+  }
+}
